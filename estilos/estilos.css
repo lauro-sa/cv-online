@@ -1,0 +1,418 @@
+
+/*-------------General para todos--------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+h2{
+	font-family: 'Caveat', cursive;
+	font-size: 38px;
+	font-weight: 600;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	
+
+	text-align: left;
+	padding-left: 10px;
+
+	text-decoration-line: overline;
+	text-decoration-color: rgb(228, 174, 102);
+}
+
+/*-------------General para todos Fin--------------*/
+/*-------------body--------------*/
+
+body{
+	background-color: whitesmoke;
+	transition: 500ms;
+}
+
+/*-------------Boton modo Claro/Oscuro--------------*/
+.textoModo{
+	text-align: center;
+	margin-top: 5px;
+	font-size: 14px;
+	color: rgb(31, 79, 147);
+}
+
+.M-O{
+	display: none;
+}
+
+.containerBody{
+	background-color: rgb(236, 236, 236);
+	max-width: 1100px;
+	min-width: 520px;
+	margin: auto;
+	margin-top: 20px;	
+	margin-bottom: 20px;
+}
+
+.boton1{
+	float: right;
+	margin: 20px;
+}
+
+#boton {
+	background: #222;
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 40px;
+	border-radius: 40px;
+	transition: 0.5s;
+	box-shadow: inset 0 8px 60px black;
+	
+}
+#boton .indicador {
+	position: absolute;
+	background: linear-gradient(to bottom, #444, #222);
+	width: 40px;
+	height: 40px;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	transform: scale(0.9);
+	box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 4px 4px rgba(255, 255, 255, 0.2), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+	transition: 0.5s;
+}
+#boton.mododark {
+	background: whitesmoke;
+	box-shadow: inset 0 8px 60px #cbcaca;
+}
+#boton.mododark .indicador {
+	left: 40px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgb(255, 255, 255), inset 0 -4px 4px rgb(255, 255, 255);
+	background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+}
+
+/*-------------Fin Boton modo Claro/Oscuro--------------*/
+/*-------------header--------------*/
+
+.container1{
+	display: flex;
+	flex-wrap: wrap;
+
+	max-width: 1000px;
+	margin: auto;
+
+	min-width: 520px;
+}
+
+.img img{
+	width: 100%;
+	display: block;
+	margin: auto; /* Centrar imagen horizontalmente*/
+}
+
+.img{
+	flex: 1;
+
+	margin: 5px;
+
+	display: flex; /* Centrar imagen verticalmente*/
+	justify-content: center;
+	align-items: center;
+}
+
+.descripcion{
+	flex: 2;
+	padding: 25px;
+	margin: 5px;
+}
+
+.descripcion>h1{
+	margin: 15px;
+	text-align: center;
+	font-size: 65px;
+
+color: rgb(31, 79, 147);
+}
+
+.descripcion>h3{
+	font-family: 'Caveat', cursive;
+	font-size: 45px;
+	margin: 15px;
+	text-align: center;
+
+	color: rgb(31, 79, 147);
+
+	text-decoration-line:line-through;
+	text-decoration-color: rgba(228, 173, 102, 0.604);
+}
+
+.linea{
+	border-top: 3px solid rgb(31, 79, 147);
+	height: 2px;
+	max-width: 60%; 
+	padding: 0;
+	text-align: center;
+
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+/*-------------header Fin--------------*/
+/*-------------main--------------*/
+
+main{
+	max-width: 1000px;
+	min-width: 520px;
+	margin: auto;
+}
+
+/*Información dentro del main*/
+.info{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	margin-top: 5px;
+	padding: 5px;
+
+	text-align: center;
+}
+
+.info{
+	flex: 1;
+	min-width: 520px;
+}
+
+.info a{
+	font-size: 15px;
+	color: black;
+	font-weight: 600;
+	*vertical-align: middle; /* Centrar texto al icono */
+}
+
+.info a i{
+	font-size: 35px;
+	margin: 30px;
+	color: rgb(31, 79, 147);
+
+	vertical-align: middle; /* icono al texto */
+	transition: all 300ms;
+}
+
+.info i:hover{
+	transform: scale(1.20);
+	color: black;
+}
+
+.estudios{
+	flex: 2;
+}
+
+/* Habilidades dentro del main */
+
+.habilidades{
+	display: flex;
+	flex-wrap: wrap;
+
+	min-width: 520px;
+	justify-content: center;
+	
+}
+
+.habilidades img{
+	width: 50px;
+	height: 50px;
+
+	margin: 25px;
+}
+
+.habilidades img:hover{
+	transition: 300ms;
+	transform: rotate3d(0, 1, 0, 60deg);
+}
+
+.experiencia{
+	text-align: center;
+}
+
+.experiencia li{
+	margin: 20px;
+	font-weight: 400;
+}
+
+/*-------------main Fin--------------*/
+/*-------------footer--------------*/
+
+footer{
+	max-width: 1000px;
+	min-width: 520px;
+	margin: auto;
+}
+
+footer i{
+	font-size: 25px;
+	margin: 10px;
+	padding: 10px;
+	color: rgb(31, 79, 147);
+
+	vertical-align: middle; /* icono al texto */
+
+	transition: all 300ms;
+}
+
+footer i:hover{
+	transform: scale(1.20);
+}
+
+footer a{
+	font-size: 15px;
+	font-weight: 600;
+	color: black;
+}
+
+.contacto{
+	display: flex;
+	justify-content: center;
+}
+
+/*-------------footer Fin--------------*/
+/*-------------body Fin--------------*/
+
+
+
+
+/* ------------------ModoOscuro------------------ */
+/* ------------------ModoOscuro------------------ */
+
+body.mododark{
+	background-color: black;
+}
+
+.mododark .textoModo{
+	color: #cbcaca;
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+.mododark .M-C{
+	display: none;
+}
+.mododark .M-O{
+	display:block;
+}
+
+.mododark .containerBody{
+	background-color: rgb(30, 29, 29);
+}
+
+.mododark .descripcion>h1{
+	color: rgb(44, 114, 211);
+}
+
+.mododark .descripcion>h3{
+	color: rgb(44, 114, 211);
+}
+
+.mododark .descripcion p{
+	color: whitesmoke;
+}
+
+.mododark h2{
+	color: whitesmoke;
+}
+
+.mododark .info a{
+	color: whitesmoke;
+}
+
+.mododark .experiencia li{
+	color: whitesmoke;
+}
+
+.mododark .contacto a{
+	color: whitesmoke;
+}
+
+.mododark .info a i{
+	color: rgb(44, 114, 211);
+}
+
+.mododark footer i{
+	color: rgb(44, 114, 211);
+}
+
+.mododark .linea{
+	border-top: 3px solid rgb(44, 114, 211);
+}
+
+/* ------------------ModoOscuro------------------ */
+/* ------------------ModoOscuro------------------ */
+
+
+
+
+
+/* ------------------Responsive------------------ */
+/* ------------------Responsive------------------ */
+
+
+@media screen and (max-width:750px){
+    
+	main{
+		width: 300px;
+	}
+
+	.container1{
+		flex-direction: column;
+	}
+
+	.img img{
+		width: 60%;
+	}
+
+	h2{
+		text-align: center;
+		margin-top: 25px;
+		margin-bottom: 10px;
+	}
+
+	.linea{
+		display: none;
+	}
+
+	.descripcion{
+		margin: auto;
+	}
+
+	.datos-1{
+		display: flex;
+		flex-direction: column;
+		text-align:left;
+	}
+
+	.Estudios{
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+
+	.Estudios a i{
+		margin-right: 15px;
+	}
+
+	.contacto{
+		flex-direction: column;
+		text-align: center;
+	}
+
+}
+
+
+/* ------------------Responsive------------------ */
+/* ------------------Responsive------------------ */
+
